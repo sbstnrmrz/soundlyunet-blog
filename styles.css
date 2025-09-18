@@ -48,6 +48,12 @@ body, html {
 
 }
 
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 main {
   max-width: 800px;
   margin: 40px auto;
