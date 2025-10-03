@@ -9,18 +9,254 @@
   </head>
   <body>
     <nav id="navbar">
-      <a id="app-logo">
+      <a href="./index.html" id="app-logo">
         SoundlyUNET
       </a>
       <ul id='navlinks'>
+        <li class="nav-item selected">
+          <a href="./index.html" class="nav-a">Inicio</a>
+        </li>
         <li class="nav-item">
-          <a href="./index.html" class="nav-a">Acerca De</a>
+          <a href="./blog.html" class="nav-a">Blog</a>
         </li>
         <li class="nav-item">
           <a href="./glosary.html" class="nav-a">Glosario</a>
         </li>
       </ul>
     </nav>
+    <main>
+      <div class="container">
+        <div class="blog-entry">
+          <h1>Fase 1: Fundamentos y Diseño Conceptual</h1>
+          <h2 style="margin-block: 16px;">Planteamiento del Problema</h2>
+          <p>
+            La comunidad de la UNET no cuenta con una plataforma unificada que le permita a 
+            sus miembros (estudiantes y profesores) compartir, descubrir y discutir 
+            sus gustos musicales. Esta falta de un espacio digital común limita la interacción social y la difusión de las creaciones musicales de los propios artistas de la comunidad, dejando talentos locales sin un canal de exposición y a los aficionados sin un lugar para explorar nuevos sonidos y conectar con otros con intereses similares.
+          </p>
+          <div style="display: flex; justify-content: center;">
+            <img style="margin-block: 16px; width: 450px" src="assets/search.jpg" alt="">
+          </div>
 
+          <h2 style="margin-block: 16px;">Mision</h2>
+          <p>
+            Crear una plataforma digital para la comunidad UNET que fomente la conexión, el
+            intercambio cultural y la promoción del talento musical, ofreciendo un 
+            espacio inclusivo donde los usuarios puedan compartir sus gustos, descubrir 
+            nuevas canciones y dar a conocer sus propias composiciones
+          </p>
+          <div style="display: flex; justify-content: center;">
+            <img style="margin-block: 16px; width: 450px" src="assets/mision.svg" alt="">
+          </div>
+
+          <h2 style="margin-block: 16px;">Objetivo General</h2>
+          <p>
+            Desarrollar un sistema de información web, llamado SoundlyUNET, que sirva 
+            como una plataforma social para la comunidad UNET, permitiendo la interacción, 
+            el intercambio de contenido musical y la promoción de composiciones propias de la comunidad. 
+          </p>
+          <div style="display: flex; justify-content: center;">
+            <img style="width: 450px; margin-top: 16px;" src="assets/objetivo.jpg" alt="">
+          </div>
+          <h2 style="margin-block: 16px;">Objetivo Específicos</h2>
+          <ul>
+            <li>
+              Diseñar y desarrollar una interfaz de usuario atractiva e intuitiva (frontend con React) 
+              que facilite la navegación y la interacción social
+            </li>
+            <li>
+              Crear un backend robusto y escalable (con Express.js y Node.js) que gestione 
+              eficientemente los perfiles de usuario, las publicaciones, los comentarios y las interacciones
+            </li>
+            <li>
+              Implementar una base de datos (MongoDB) para almacenar de manera segura y organizada 
+              los datos de los usuarios, los enlaces de canciones, las composiciones y 
+              el historial de actividad.
+            </li>
+            <li>
+              Integrar funcionalidades clave como el feed de actividad, la creación de 
+              perfiles de usuario, la publicación de enlaces (de plataformas como Spotify y YouTube) 
+              y un sistema de calificaciones y reseñas para fomentar la participación
+            </li>
+            <li>
+              Facilitar la exposición de talentos locales al permitir que los usuarios 
+              suban y compartan sus propias composiciones, creando un espacio de 
+              retroalimentación para los artistas emergentes de la UNET.
+            </li>
+          </ul>
+
+
+        </div>
+
+        <div id='phase-2' class="blog-entry">
+          <h1>Fase 2: Modelado de Componentes del Sistema para SoundlyUNET</h1>
+          <hr>
+
+          <h2 style="text-align: start; margin-block: 16px;">Los Cinco Bloques Esenciales del Sistema</h2>
+          <ul>
+            <li>
+              <h3 style="text-align: start;">Personas</h3>
+              Importancia: Son los usuarios finales que dan propósito al sistema
+              <ul>
+                <li>Comunidad UNET: Audiencia que consume y interactúa con el contenido</li>
+                <li>Administradores: Moderadores y gestores de la plataforma</li>
+                <li>Estudiantes UNET: Creadores y consumidores de contenido musical</li>
+                <li>Profesores UNET: Evaluadores y mentores del talento artístico</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Datos</h3>
+              Importancia: Representan el valor central de la plataforma
+              <ul>
+                <li>Composiciones musicales: Archivos de audio y metadatos</li>
+                <li>Reviews/Opiniones: Análisis y críticas de álbumes</li>
+                <li>Perfiles de usuario: Información académica y preferencias musicales</li>
+                <li>Metadatos de MusicBrainz: Información estandarizada de álbumes</li>
+                <li>Comentarios: Interacción social alrededor del contenido</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Actividades</h3>
+              Importancia: Definen las funcionalidades clave del sistema
+              <ul>
+                <li>Subir composiciones: Compartir creaciones musicales propias</li>
+                <li>Publicar reviews: Analizar y evaluar álbumes existentes</li>
+                <li>Comentar y interactuar: Generar discusión alrededor del contenido</li>
+                <li>Buscar y descubrir: Explorar nuevo contenido musical</li>
+                <li>Moderar contenido: Mantener la calidad de las publicaciones</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Redes</h3>
+              Importancia: Conectan los componentes y usuarios del sistema
+              <ul>
+                <li>Red social interna: Conexiones entre usuarios de la UNET</li>
+                <li>Flujos de información: Comunicación entre frontend y backend</li>
+                <li>API externa MusicBrainz: Integración con base de datos musical global</li>
+                <li>Red de base de datos: Comunicación entre servidor y MongoDB</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Tecnología</h3>
+              Importancia: Habilita la ejecución y escalabilidad del sistema
+              <ul>
+                <li>MERN Stack: Base tecnológica para desarrollo full-stack</li>
+                <li>MongoDB: Almacenamiento flexible de datos musicales y de usuario</li>
+                <li>React + TailwindCSS: Interfaz moderna y responsive</li>
+                <li>API de MusicBrainz: Fuente confiable de metadatos musicales</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2 style="text-align: start; margin-block: 16px;">Importancia de los Perfiles de Usuario con Distintos Roles</h2>
+          <ul>
+            <li>
+              <h3 style="text-align: start;">Estudiante Creador</h3>
+              <strong>Necesidades:</strong>
+              <ul>
+                <li>Plataforma simple para compartir composiciones</li>
+                <li>Feedback constructivo de pares y profesores</li>
+                <li>Visibilidad de su trabajo dentro de la comunidad</li>
+              </ul>
+              <strong>Rol:</strong> Generador de contenido original, impulsor principal del sistema
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Estudiante Consumidor</h3>
+              <strong>Necesidades:</strong>
+              <ul>
+                <li>Descubrir nueva música de la comunidad</li>
+                <li>Aprender mediante análisis y reviews</li>
+                <li>Conectar con creadores con intereses similares</li>
+              </ul>
+              <strong>Rol:</strong> Audiencia activa, generadora de engagement
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Profesor Evaluador</h3>
+              <strong>Necesidades:</strong>
+              <ul>
+                <li>Herramientas para evaluación académica</li>
+                <li>Seguimiento del progreso estudiantil</li>
+                <li>Espacio para retroalimentación especializada</li>
+              </ul>
+              <strong>Rol:</strong> Garante de calidad, mentor musical
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Administrador/Moderador</h3>
+              <strong>Necesidades:</strong>
+              <ul>
+                <li>Control de contenido inapropiado</li>
+                <li>Gestión de usuarios y permisos</li>
+                <li>Mantenimiento de la calidad de la plataforma</li>
+              </ul>
+              <strong>Rol:</strong> Mantenedor del ecosistema saludable
+            </li>
+          </ul>
+
+          <p><strong>Importancia de la diferenciación:</strong> Cada rol requiere interfaces, permisos y funcionalidades específicas que optimizan su experiencia y maximizan su contribución al ecosistema.</p>
+
+          <h2 style="text-align: start; margin-block: 16px;">Objetivo de los Flujos de Información entre Áreas</h2>
+          <ul>
+            <li>
+              <h3 style="text-align: start;">Flujo Usuario → Frontend</h3>
+              <strong>Objetivo:</strong> Capturar interacciones y traducirlas en acciones del sistema
+              <ul>
+                <li><strong>Ejemplo:</strong> Cuando un estudiante sube una composición, el frontend valida formatos y prepara los datos para el backend</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Flujo Frontend → Backend</h3>
+              <strong>Objetivo:</strong> Procesar solicitudes y aplicar lógica de negocio
+              <ul>
+                <li><strong>Ejemplo:</strong> El backend recibe la composición, la almacena en MongoDB y registra los metadatos</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Flujo Backend → API MusicBrainz</h3>
+              <strong>Objetivo:</strong> Enriquecer datos con información estandarizada
+              <ul>
+                <li><strong>Ejemplo:</strong> Al crear una review, el sistema consulta MusicBrainz para autocompletar información del álbum</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Flujo Backend → Base de Datos</h3>
+              <strong>Objetivo:</strong> Persistencia confiable y recuperación eficiente de datos
+              <ul>
+                <li><strong>Ejemplo:</strong> Almacenar relaciones entre usuarios, composiciones y comentarios</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3 style="text-align: start;">Flujo Sistema → Usuario</h3>
+              <strong>Objetivo:</strong> Proporcionar feedback y resultados de las acciones
+              <ul>
+                <li><strong>Ejemplo:</strong> Confirmación de subida exitosa, mostrar comentarios nuevos en tiempo real</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 style="text-align: start; margin-block: 16px;">Objetivos Principales de los Flujos</h3>
+          <ul>
+            <li><strong>Eficiencia:</strong> Minimizar latencia en las operaciones críticas</li>
+            <li><strong>Consistencia:</strong> Mantener datos sincronizados a través del sistema</li>
+            <li><strong>Escalabilidad:</strong> Permitir crecimiento sin degradación del rendimiento</li>
+            <li><strong>Experiencia de usuario:</strong> Proporcionar respuestas rápidas e informativas</li>
+            <li><strong>Integridad de datos:</strong> Asegurar que la información se mantenga precisa y completa</li>
+          </ul>
+
+          <p>Este modelado de componentes asegura que SoundlyUNET no solo funcione técnicamente, sino que cumpla su propósito fundamental de conectar y potenciar el talento musical de la comunidad UNET de manera efectiva y escalable.</p>
+        </div>
+
+      </div>
+    </main>
   </body>
 </html>

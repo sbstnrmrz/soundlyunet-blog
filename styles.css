@@ -48,6 +48,11 @@ body, html {
 
 }
 
+#app-logo {
+  color: white;
+  text-decoration: none;
+}
+
 .main-div {
   display: flex;
   flex-direction: column;
@@ -55,15 +60,39 @@ body, html {
 }
 
 main {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
+.container {
+  margin-block: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 800px;
 }
+
+.blog-entry {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.50);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 
 #main-about {
   display: flex;
@@ -83,15 +112,13 @@ h1 {
   }
 }
 
-/* Contenedor del glosario */
 .glosario-container {
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden; /* Para que el borde redondeado afecte a los hijos */
+  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Estilo de cada término */
 .termino-titulo {
   background-color: #ffffff;
   padding: 15px 20px;
@@ -100,7 +127,7 @@ h1 {
   border-bottom: 1px solid #eee;
   font-size: 1.2rem;
   font-weight: 600;
-  position: relative; /* Para el ícono +/- */
+  position: relative;
   transition: background-color 0.3s ease;
 }
 
@@ -108,7 +135,6 @@ h1 {
   background-color: #f9f9f9;
 }
 
-/* Ícono de "+" y "-" para indicar si está abierto o cerrado */
 .termino-titulo::after {
   content: '+';
   position: absolute;
@@ -120,7 +146,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Estilo de la definición (oculta por defecto) */
 .definicion {
   background-color: #fdfdfd;
   padding: 0 20px;
@@ -136,21 +161,16 @@ h1 {
 }
 
 
-/* --- ESTILOS PARA LA INTERACTIVIDAD --- */
-
-/* Cuando un término está activo (clicado) */
 .termino.active .termino-titulo {
   color: #3498db;
 }
 
-/* Cambia el ícono a "-" cuando está activo */
 .termino.active .termino-titulo::after {
-  content: '−'; /* Usamos un guion más apropiado */
+  content: '−';
 }
 
-/* Muestra la definición cuando el término está activo */
 .termino.active .definicion {
-  max-height: 300px; /* Altura suficiente para el contenido */
+  max-height: 300px;
   transition: max-height 0.2s cubic-bezier(1, 0, 1, 0);
 }
 
