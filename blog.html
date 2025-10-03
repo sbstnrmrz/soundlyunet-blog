@@ -31,7 +31,7 @@
           <h2 style="margin-block: 16px;">Planteamiento del Problema</h2>
           <p>
             La comunidad de la UNET no cuenta con una plataforma unificada que le permita a 
-            sus miembros (estudiantes y profesores) compartir, descubrir y discutir 
+            sus miembros compartir, descubrir y discutir 
             sus gustos musicales. Esta falta de un espacio digital común limita la interacción social y la difusión de las creaciones musicales de los propios artistas de la comunidad, dejando talentos locales sin un canal de exposición y a los aficionados sin un lugar para explorar nuevos sonidos y conectar con otros con intereses similares.
           </p>
           <div style="display: flex; justify-content: center;">
@@ -255,6 +255,39 @@
 
           <p>Este modelado de componentes asegura que SoundlyUNET no solo funcione técnicamente, sino que cumpla su propósito fundamental de conectar y potenciar el talento musical de la comunidad UNET de manera efectiva y escalable.</p>
         </div>
+
+        <div class="blog-entry">
+          <h1>Tecnicas de Levantamiento de Informacion</h1>
+          <h2 style="margin-top: 16px;">Tecnica 1: Analisis de Documentos o Sistemas Existentes</h2>
+          <p>
+            Esta técnica consiste en estudiar a fondo las plataformas y sistemas que ya existen y
+            que son similares a SoundlyUNET. Para un proyecto que involucra reviews y
+            contenido musical, es vital aprender de los pioneros. Se examinan sitios 
+            especializados en críticas como Rate Your Music o AllMusic para entender 
+            cómo estructuran una reseña: ¿qué metadatos de un álbum son esenciales 
+            (artista, año, género)?. De manera similar, se analizan 
+            plataformas de compartición como SoundCloud para ver cómo manejan la 
+            subida de archivos y el feedback en composiciones originales. Este estudio 
+            de campo no solo identifica las funcionalidades obligatorias, sino que 
+            también justifica decisiones tecnológicas. Por ejemplo, el requisito de obtener
+            metadatos ricos y estandarizados para los álbumes lleva directamente a la elección
+            de la API de MusicBrainz y su librería, la cual se convierte en un requisito 
+            funcional central para el backend de ExpressJS. En esencia, esta técnica ayuda a 
+            establecer un estándar de calidad y a definir el alcance del proyecto basándose en las 
+            mejores prácticas del mercado.
+          </p>
+          <p>
+            <img style="width: 400px;" src="assets/recopilation.svg" alt="">
+          <h2 style="margin-top: 16px;">Tecnica 2: Observacion</h2>
+          <p>
+La observación es una técnica de levantamiento de información que va más allá de lo que los usuarios dicen, enfocándose en lo que realmente hacen. Para SoundlyUNET, esto implica observar a la comunidad UNET mientras interactúan con música y contenido artístico en su vida diaria. Por ejemplo, se podría observar cómo los estudiantes consumen reviews o cómo interactúan con los comentarios en redes sociales sobre arte. Esto permite determinar la estructura ideal para la página de comentarios y si el diseño debe favorecer un feedback más corto y directo o comentarios más largos y reflexivos. Otra observación crucial es el proceso de subida de archivos. Al mirar cómo los artistas de la UNET suben sus composiciones a otras plataformas (como drives o servicios externos), se pueden identificar los puntos de fricción y la complejidad que debe evitar SoundlyUNET. Esto garantiza que la ruta para subir una composición (routes/ en el backend y pages/ en el frontend) sea lo más simple e intuitiva posible, asegurando que el diseño de la plataforma se alinee con el comportamiento natural de sus usuarios objetivo.
+          </p>
+          <img style="width: 400px;" src="assets/investigate.jpg" alt="">
+
+
+        </div>
+
+
 
       </div>
     </main>
